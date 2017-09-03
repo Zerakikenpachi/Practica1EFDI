@@ -3,19 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practica1efdi;
+package com.business;
 
 /**
  *
  * @author victor restrepo
  */
-public class Practica1EFDI {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class Business {
+    public void main (String[] args){
+        System.out.println("Felicidades tu clase Bussiness esta funcionando XD");
+        System.out.println("Jamas dijo el zato");
     }
-    
 }
