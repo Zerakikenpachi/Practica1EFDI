@@ -12,10 +12,7 @@ package com.business;
 public class Business {
     public void main (String[] args){
         System.out.println("Felicidades tu clase Bussiness esta funcionando XD");
-        System.out.println("Jamas dijo el zato");
-        System.out.println("Siempre dijo el zato");
         
-        
-                System.out.println("NOOOOO JAMAS DIJO EL ZATO");
+        System.out.println("LO LOGRAAAMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS");
     }
 }
