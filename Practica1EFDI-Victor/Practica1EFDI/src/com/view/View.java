@@ -12,5 +12,12 @@ package com.view;
 public class View {
     public void main (String[] args){
         System.out.println("Felicidades tu clase View esta funcionando XD");
+        System.out.println("Andres");
+        System.out.println("Es");
+        System.out.println("El");
+        System.out.println("Puto");
+        System.out.println("Amo");
+        System.out.println("XD");
+        System.out.println("Armholes");
     }
 }
