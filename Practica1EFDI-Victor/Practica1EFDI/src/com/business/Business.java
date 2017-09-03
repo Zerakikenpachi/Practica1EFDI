@@ -15,5 +15,6 @@ public class Business {
         
         System.out.println("LO LOGRAAAMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS");
         System.out.println("Si brother");
+        System.out.println("Ojala asi sea");
     }
 }
