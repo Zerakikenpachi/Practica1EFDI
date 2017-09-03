@@ -16,6 +16,7 @@ public class Practica1EFDI {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("Felicidades tu repositorio esta funcionando XD");
     }
     
 }
