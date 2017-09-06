@@ -12,5 +12,6 @@ package com.controller;
 public class Controller {
     public void main (String[] args){
         System.out.println("Felicidades tu clase Controller esta funcionando XD");
+         System.out.println("Felicidades");
     }
 }
