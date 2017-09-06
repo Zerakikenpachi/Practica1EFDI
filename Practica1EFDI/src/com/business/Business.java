@@ -12,9 +12,5 @@ package com.business;
 public class Business {
     public void main (String[] args){
         System.out.println("Felicidades tu clase Bussiness esta funcionando XD");
-        
-        System.out.println("LO LOGRAAAMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS");
-        System.out.println("Si brother");
-        System.out.println("Ojala asi sea");
     }
 }
