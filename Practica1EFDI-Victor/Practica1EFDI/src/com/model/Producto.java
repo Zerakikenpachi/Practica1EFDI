@@ -11,7 +11,6 @@ package com.model;
  */
 public class Producto {
 
-    //private String imagen;
     private String tipo;
     private int cantidad;
     private double precio;
