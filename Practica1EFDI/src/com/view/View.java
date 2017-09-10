@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.business;
+package com.view;
 
 /**
  *
  * @author victor restrepo
  */
-public class Business {
+public class View {
     public void main (String[] args){
-        System.out.println("Felicidades tu clase Bussiness esta funcionando XD");
-        
-        System.out.println("LO LOGRAAAMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS");
+        System.out.println("Felicidades tu clase View esta funcionando XD");
     }
 }

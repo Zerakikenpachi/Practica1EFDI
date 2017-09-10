@@ -1,22 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.model;
 
 /**
  *
- * @author Andres
+ * @author Andres Carrascal Verona
  */
 public class Producto {
 
     private String tipo;
-    private int cantidad;
-    private double precio;
+    private String coleccion;
+    private String cantidad;
+    private String precio;
 
-    public Producto(String tipo, int cantidad, double precio) {
+    public Producto(String tipo, String coleccion, String cantidad, String precio) {
         this.tipo = tipo;
+        this.coleccion = coleccion;
         this.cantidad = cantidad;
         this.precio = precio;
     }
@@ -29,20 +26,33 @@ public class Producto {
         this.tipo = tipo;
     }
 
-    public int getCantidad() {
+    public String getColeccion() {
+        return coleccion;
+    }
+
+    public void setColeccion(String coleccion) {
+        this.coleccion = coleccion;
+    }
+
+    public String getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
 
-    public double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return tipo + " | " + coleccion + " | " + cantidad + " | " + precio;
     }
 
 }
