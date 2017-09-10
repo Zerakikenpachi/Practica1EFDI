@@ -13,7 +13,6 @@ import java.util.Date;
  */
 public class Cliente {
 
-    private static final long serialVersionUID = 1L;
     private String idCliente;
     private String direccion;
     private Date fechaNacimiento;

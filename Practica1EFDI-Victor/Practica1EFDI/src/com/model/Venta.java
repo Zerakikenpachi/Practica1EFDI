@@ -14,7 +14,6 @@ import java.util.List;
  */
 public class Venta {
 
-    private static final long serialVersionUID = 1L;
     private String idVenta;
     private int valorProducto;
     private int descuento;
