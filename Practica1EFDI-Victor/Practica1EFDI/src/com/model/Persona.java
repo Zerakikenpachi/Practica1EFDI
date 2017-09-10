@@ -11,28 +11,40 @@ package com.model;
  */
 public class Persona {
 
-    private String identificacion;
+    private static final long serialVersionUID = 1L;
+    private String idPersona;
     private String nombre;
     private String apellido;
     private String correo;
-    private String numeroCelular;
+    private int nroCelular;
     private String genero;
+    private String idCajero;
+    private String idCliente;
 
-    public Persona(String identificacion, String nombre, String apellido, String correo, String numeroCelular, String genero) {
-        this.identificacion = identificacion;
+    public Persona() {
+    }
+
+    public Persona(String idPersona) {
+        this.idPersona = idPersona;
+    }
+
+    public Persona(String idPersona, String nombre, String apellido, String correo, int nroCelular, String genero, String idCajero, String idCliente) {
+        this.idPersona = idPersona;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
-        this.numeroCelular = numeroCelular;
+        this.nroCelular = nroCelular;
         this.genero = genero;
+        this.idCajero = idCajero;
+        this.idCliente = idCliente;
     }
 
-    public String getIdentificacion() {
-        return identificacion;
+    public String getIdPersona() {
+        return idPersona;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
+    public void setIdPersona(String idPersona) {
+        this.idPersona = idPersona;
     }
 
     public String getNombre() {
@@ -59,12 +71,12 @@ public class Persona {
         this.correo = correo;
     }
 
-    public String getNumeroCelular() {
-        return numeroCelular;
+    public int getNroCelular() {
+        return nroCelular;
     }
 
-    public void setNumeroCelular(String numeroCelular) {
-        this.numeroCelular = numeroCelular;
+    public void setNroCelular(int nroCelular) {
+        this.nroCelular = nroCelular;
     }
 
     public String getGenero() {
@@ -74,6 +86,46 @@ public class Persona {
     public void setGenero(String genero) {
         this.genero = genero;
     }
-    
 
+    public String getIdCajero() {
+        return idCajero;
+    }
+
+    public void setIdCajero(String idCajero) {
+        this.idCajero = idCajero;
+    }
+
+    public String getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(String idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idPersona != null ? idPersona.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Persona)) {
+            return false;
+        }
+        Persona other = (Persona) object;
+        if ((this.idPersona == null && other.idPersona != null) || (this.idPersona != null && !this.idPersona.equals(other.idPersona))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "com.model.Persona[ idPersona=" + idPersona + " ]";
+    }
+   
 }
