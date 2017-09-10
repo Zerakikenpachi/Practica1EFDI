@@ -14,6 +14,7 @@ import java.util.Date;
  * @author victor restrepo
  */
 public class ClienteControlador {
+
     ClienteNegocio p;
     Cliente nuevo;
 

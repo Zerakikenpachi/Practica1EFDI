@@ -14,6 +14,7 @@ import com.model.Cliente;
  * @author victor restrepo
  */
 public class ClienteNegocio {
+
     ClienteDao clienteDao;
 
     public ClienteNegocio() {

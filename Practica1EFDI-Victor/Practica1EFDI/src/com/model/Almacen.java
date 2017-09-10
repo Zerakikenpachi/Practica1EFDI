@@ -10,8 +10,7 @@ package com.model;
  * @author Duvan Otero
  */
 public class Almacen {
-    
-    
+
     private static final long serialVersionUID = 1L;
     private String idAlmacen;
     private int nroCodigo;
@@ -98,7 +97,5 @@ public class Almacen {
     public String toString() {
         return "com.model.Almacen[ idAlmacen=" + idAlmacen + " ]";
     }
-    
-}
-    
 
+}

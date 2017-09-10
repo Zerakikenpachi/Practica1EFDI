@@ -10,6 +10,7 @@ import com.model.Cliente;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import static java.nio.file.StandardOpenOption.APPEND;
@@ -23,6 +24,15 @@ import java.util.Map;
  */
 public class FileClienteDao implements ClienteDao {
 
+    public FileClienteDao() {
+        if (!Files.exists(file)) {
+            try {
+                Files.createFile(file);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     private static final String REGISTRO_ELIMINADO_TEXT = "||||||||||";
     private static final String NOMBRE_ARCHIVO = "Cliente";
     private static final Path file = Paths.get(NOMBRE_ARCHIVO);

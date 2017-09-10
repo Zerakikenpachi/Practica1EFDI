@@ -15,17 +15,18 @@ import java.util.List;
  * @author Andres
  */
 public class ProductoNegocio {
+
     ProductoDao productoDao;
 
     public ProductoNegocio() {
         productoDao = new FileProductoDao();
     }
-    
-    public boolean GuardarProducto(Producto nuevo){
-       return productoDao.saveProducto(nuevo);
+
+    public boolean GuardarProducto(Producto nuevo) {
+        return productoDao.saveProducto(nuevo);
     }
-    
-    public List<Producto> ConsultarProductos(){
+
+    public List<Producto> ConsultarProductos() {
         return productoDao.getAllProducto();
     }
 }

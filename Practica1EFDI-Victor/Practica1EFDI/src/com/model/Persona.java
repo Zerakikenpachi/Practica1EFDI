@@ -127,5 +127,5 @@ public class Persona {
     public String toString() {
         return "com.model.Persona[ idPersona=" + idPersona + " ]";
     }
-   
+
 }

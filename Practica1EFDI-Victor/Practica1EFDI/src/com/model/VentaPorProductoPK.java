@@ -10,6 +10,7 @@ package com.model;
  * @author victor restrepo
  */
 class VentaPorProductoPK {
+
     private String idProducto;
     private String idVenta;
 

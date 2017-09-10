@@ -12,7 +12,7 @@ import java.util.Date;
  * @author Duvan Otero
  */
 public class Cajero {
-    
+
     private static final long serialVersionUID = 1L;
     private String idCajero;
     private Date fechaIngreso;
@@ -89,8 +89,5 @@ public class Cajero {
     public String toString() {
         return "com.model.Cajero[ idCajero=" + idCajero + " ]";
     }
-    
-}
-    
-    
 
+}

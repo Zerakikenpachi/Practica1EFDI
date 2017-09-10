@@ -10,6 +10,7 @@ package com.model;
  * @author victor restrepo
  */
 public class VentaPorProducto {
+
     private static final long serialVersionUID = 1L;
     protected VentaPorProductoPK ventaporproductoPK;
     private String idCantidad;

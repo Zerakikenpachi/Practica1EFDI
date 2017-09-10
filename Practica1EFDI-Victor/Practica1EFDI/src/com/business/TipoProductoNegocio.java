@@ -15,15 +15,18 @@ import java.util.List;
  * @author Andres
  */
 public class TipoProductoNegocio {
+
     TipoProductoDao TiPro;
-    public TipoProductoNegocio(){
+
+    public TipoProductoNegocio() {
         TiPro = new FileTipoProductoDao();
     }
-    public boolean GuardarTipoProducto(TipoProducto tipPro){
+
+    public boolean GuardarTipoProducto(TipoProducto tipPro) {
         return TiPro.saveTipoProducto(tipPro);
     }
-    
-    public List<TipoProducto> ConsultarProductos(){
+
+    public List<TipoProducto> ConsultarProductos() {
         return TiPro.getAllTipProducto();
     }
 }

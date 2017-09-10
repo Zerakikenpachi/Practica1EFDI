@@ -10,6 +10,7 @@ package com.model;
  * @author victor restrepo
  */
 public class Inventario {
+
     private String idInventario;
     private int cantProdPorAlmacen;
     private String idAlmacen;
