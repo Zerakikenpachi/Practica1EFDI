@@ -1,7 +1,7 @@
 package com.dao_.imp;
 
 import com.dao.TipoProductoDao;
-import com.model.TipProducto;
+import com.model.TipoProducto;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
@@ -38,7 +38,7 @@ public class FileTipoProductoDao implements TipoProductoDao {
     private static final int NOMBRE_LONGITUD = 10;
 
     @Override
-    public boolean saveTipoProducto(TipProducto tipproducto) {
+    public boolean saveTipoProducto(TipoProducto tipproducto) {
         String registro = parseTipoProductoString(tipproducto);
         byte data[] = registro.getBytes();
         ByteBuffer out = ByteBuffer.wrap(data);
@@ -52,14 +52,14 @@ public class FileTipoProductoDao implements TipoProductoDao {
     }
 
     @Override
-    public List<TipProducto> getAllTipProducto() {
-        List<TipProducto> TipProductos = new ArrayList<TipProducto>();
+    public List<TipoProducto> getAllTipProducto() {
+        List<TipoProducto> TipProductos = new ArrayList<TipoProducto>();
         try (SeekableByteChannel sbc = Files.newByteChannel(file)) {
             ByteBuffer buf = ByteBuffer.allocate(LONGITUD_REGISTRO);
             String encoding = System.getProperty("file.encoding");
             while (sbc.read(buf) > 0) {
                 buf.rewind();
-                TipProducto TipoProducto = parseTipoProducto(Charset.forName(encoding).decode(buf));
+                TipoProducto TipoProducto = parseTipoProducto(Charset.forName(encoding).decode(buf));
                 buf.flip();
                 TipProductos.add(TipoProducto);
             }
@@ -69,7 +69,7 @@ public class FileTipoProductoDao implements TipoProductoDao {
         return TipProductos;
     }
 
-    private String parseTipoProductoString(TipProducto tipproducto) {
+    private String parseTipoProductoString(TipoProducto tipproducto) {
         StringBuilder registro = new StringBuilder(LONGITUD_REGISTRO);
         registro.append(completarCampoConEspacios(tipproducto.getReferencia(), REFERENCIA_REGISTRO));
         registro.append(completarCampoConEspacios(tipproducto.getNombre(), NOMBRE_LONGITUD));
@@ -84,7 +84,7 @@ public class FileTipoProductoDao implements TipoProductoDao {
         return String.format("%1$-" + tamanio + "s", campo);
     }
 
-    private TipProducto parseTipoProducto(CharBuffer registro) {
+    private TipoProducto parseTipoProducto(CharBuffer registro) {
 
         String referencia = registro.subSequence(0, REFERENCIA_REGISTRO).toString();
         registro.position(REFERENCIA_REGISTRO);
@@ -94,7 +94,7 @@ public class FileTipoProductoDao implements TipoProductoDao {
         registro.position(NOMBRE_LONGITUD);
         registro = registro.slice();
 
-        TipProducto p = new TipProducto(referencia, nombre);
+        TipoProducto p = new TipoProducto(referencia, nombre);
         return p;
     }
 

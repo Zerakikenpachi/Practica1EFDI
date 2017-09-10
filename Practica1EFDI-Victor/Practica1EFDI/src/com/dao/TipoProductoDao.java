@@ -1,6 +1,6 @@
 package com.dao;
 
-import com.model.TipProducto;
+import com.model.TipoProducto;
 import java.util.List;
 
 /**
@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface TipoProductoDao {
 
-    public boolean saveTipoProducto(TipProducto tipproducto);
+    public boolean saveTipoProducto(TipoProducto tipproducto);
 
-    public List<TipProducto> getAllTipProducto();
+    public List<TipoProducto> getAllTipProducto();
 }

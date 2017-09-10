@@ -1,7 +1,7 @@
 package com.controller;
 
 import com.business.TipoProductoNegocio;
-import com.model.TipProducto;
+import com.model.TipoProducto;
 import java.util.List;
 
 /**
@@ -11,7 +11,7 @@ import java.util.List;
 public class TipoProductoControlador {
 
     TipoProductoNegocio p;
-    TipProducto nuevo;
+    TipoProducto nuevo;
 
     public TipoProductoControlador() {
         p = new TipoProductoNegocio();
@@ -19,21 +19,21 @@ public class TipoProductoControlador {
 
     public boolean CrearTipoProducto(String pRefer, String pNombre) {
         if (!pRefer.equals("") && !pNombre.equals("")) {
-            nuevo = new TipProducto(pRefer, pNombre);
+            nuevo = new TipoProducto(pRefer, pNombre);
             return p.GuardarTipoProducto(nuevo);
         } else {
             return false;
         }
     }
 
-    public List<TipProducto> ConsultarTipoProductos() {
+    public List<TipoProducto> ConsultarTipoProductos() {
         return p.ConsultarProductos();
     }
 
     public String ProductoEsta(String nombre) {
         String data = null;
-        List<TipProducto> tipproducto = ConsultarTipoProductos();
-        for (TipProducto q : tipproducto) {
+        List<TipoProducto> tipproducto = ConsultarTipoProductos();
+        for (TipoProducto q : tipproducto) {
             if (q.getNombre().trim().equals(nombre)) {
                 data = q.getReferencia().trim() + " | " + q.getNombre().trim();
             }

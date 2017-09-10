@@ -7,7 +7,7 @@ package com.business;
 
 import com.dao.TipoProductoDao;
 import com.dao_.imp.FileTipoProductoDao;
-import com.model.TipProducto;
+import com.model.TipoProducto;
 import java.util.List;
 
 /**
@@ -19,11 +19,11 @@ public class TipoProductoNegocio {
     public TipoProductoNegocio(){
         TiPro = new FileTipoProductoDao();
     }
-    public boolean GuardarTipoProducto(TipProducto tipPro){
+    public boolean GuardarTipoProducto(TipoProducto tipPro){
         return TiPro.saveTipoProducto(tipPro);
     }
     
-    public List<TipProducto> ConsultarProductos(){
+    public List<TipoProducto> ConsultarProductos(){
         return TiPro.getAllTipProducto();
     }
 }

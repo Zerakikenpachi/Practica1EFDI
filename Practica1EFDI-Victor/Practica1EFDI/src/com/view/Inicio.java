@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,44 +5,12 @@
  */
 package com.view;
 
-import com.controller.ProductoControlador;
-import com.dao_.imp.FileProductoDao;
-import javax.swing.JOptionPane;
-
-/**
- *
- * @author Andres
- */
-public class Inicio {
-    
-    public static void main(String[] args) {
-        ProductoControlador p = new ProductoControlador();
-        String TipPro;
-        String CantPro;
-        String PrePro;
-        int seguir = 5;
-        while (seguir != 0) {
-            TipPro = JOptionPane.showInputDialog("Ingrese el tipo de producto");
-            CantPro = JOptionPane.showInputDialog("Ingrese la cantidad de producto");
-            PrePro = JOptionPane.showInputDialog("Ingrese el precio del prodúcto");
-            if (p.CrearProducto(TipPro, CantPro, PrePro)) {
-                JOptionPane.showMessageDialog(null, "Los datos se guardaron");
-            } else {
-                JOptionPane.showMessageDialog(null, "Los datos no se guardaron");
-            }
-            seguir = Integer.parseInt(JOptionPane.showInputDialog("Desea continuar? 0 para salir"));
-        }
-    }   
-}
-=======
-package com.view;
-
 import com.controller.ColeccionControlador;
 import com.controller.ProductoControlador;
 import com.controller.TipoProductoControlador;
 import com.model.Coleccion;
 import com.model.Producto;
-import com.model.TipProducto;
+import com.model.TipoProducto;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -107,9 +74,9 @@ public class Inicio {
                 case '4':
                     DatoConsultar = JOptionPane.showInputDialog("Ingrese 0 para ver los productos el tipo de producto");
                     if (DatoConsultar.equals("0")) {
-                        List<TipProducto> tipproducto = r.ConsultarTipoProductos();
+                        List<TipoProducto> tipproducto = r.ConsultarTipoProductos();
                         StringBuilder data = new StringBuilder("");
-                        for (TipProducto q : tipproducto) {
+                        for (TipoProducto q : tipproducto) {
                             data.append(q);
                             data.append("\n");
                         }
@@ -172,4 +139,3 @@ public class Inicio {
         return menu;
     }
 }
->>>>>>> Andy
