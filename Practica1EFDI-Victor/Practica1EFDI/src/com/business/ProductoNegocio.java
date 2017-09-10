@@ -8,6 +8,7 @@ package com.business;
 import com.dao.ProductoDao;
 import com.dao_.imp.FileProductoDao;
 import com.model.Producto;
+import java.util.List;
 
 /**
  *
@@ -22,5 +23,9 @@ public class ProductoNegocio {
     
     public boolean GuardarProducto(Producto nuevo){
        return productoDao.saveProducto(nuevo);
+    }
+    
+    public List<Producto> ConsultarProductos(){
+        return productoDao.getAllProducto();
     }
 }

@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.controller;
 
 import com.business.ProductoNegocio;
 import com.model.Producto;
+import java.util.List;
 
 /**
  *
- * @author Andres
+ * @author Andres Carrascal Verona
  */
 public class ProductoControlador {
 
@@ -21,10 +17,17 @@ public class ProductoControlador {
         p = new ProductoNegocio();
     }
 
-    public boolean CrearProducto(String pTipo, String pCantidad, String pPrecio) {
-        nuevo = new Producto(pTipo, pCantidad, pPrecio);
+    public boolean CrearProducto(String pTipo, String pColecc, String pCantidad, String pPrecio) {
+        if (!pTipo.equals("") && !pColecc.equals("") && !pCantidad.equals("") && !pPrecio.equals("")) {
+            nuevo = new Producto(pTipo, pColecc, pCantidad, pPrecio);
+            return p.GuardarProducto(nuevo);
+        } else {
+            return false;
+        }
+    }
 
-        return p.GuardarProducto(nuevo);
+    public List<Producto> ConsultarProductos() {
+        return p.ConsultarProductos();
     }
 
 }
