@@ -18,7 +18,9 @@ public class ColeccionControlador {
     }
 
     public boolean CrearColeccion(String pTrimestre, String pId) {
-        if (!pTrimestre.equals("") && !pId.equals("")) {
+        if (!VerficarColeccionExistente(pTrimestre, pId)) {
+            return false;
+        } else if (!pTrimestre.equals("") && !pId.equals("")) {
             nuevo = new Coleccion(pTrimestre, pId);
             return p.GuardarColeccion(nuevo);
         } else {
@@ -35,7 +37,18 @@ public class ColeccionControlador {
         List<Coleccion> coleccion = ConsultarColecciones();
         for (Coleccion q : coleccion) {
             if (q.getId().trim().equals(Id)) {
-                data = q.getTrimestre().trim() + " | " + q.getId().trim();
+                data = q.getTrimestre().trim() + " - " + q.getId().trim();
+            }
+        }
+        return data;
+    }
+
+    public boolean VerficarColeccionExistente(String pTrimestre, String pId) {
+        boolean data = true;
+        List<Coleccion> coleccion = ConsultarColecciones();
+        for (Coleccion q : coleccion) {
+            if (q.getId().trim().equals(pId)) {
+                data = false;
             }
         }
         return data;

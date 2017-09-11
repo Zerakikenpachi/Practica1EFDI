@@ -33,9 +33,9 @@ public class FileColeccionDao implements ColeccionDao {
 
     private static final String NOMBRE_ARCHIVO = "Coleccion";
     private static final Path file = Paths.get(NOMBRE_ARCHIVO);
-    private static final int LONGITUD_REGISTRO = 20;
-    private static final int TRIMESTRE_REGISTRO = 10;
-    private static final int ID_LONGITUD = 10;
+    private static final int LONGITUD_REGISTRO = 30;
+    private static final int TRIMESTRE_REGISTRO = 15;
+    private static final int ID_LONGITUD = 15;
 
     @Override
     public boolean saveColeccion(Coleccion coleccion) {

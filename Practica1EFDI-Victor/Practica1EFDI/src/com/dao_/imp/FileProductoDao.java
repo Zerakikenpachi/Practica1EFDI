@@ -32,11 +32,11 @@ public class FileProductoDao implements ProductoDao {
     }
     private static final String NOMBRE_ARCHIVO = "Producto";
     private static final Path file = Paths.get(NOMBRE_ARCHIVO);
-    private static final int LONGITUD_REGISTRO = 45;
+    private static final int LONGITUD_REGISTRO = 60;
     private static final int TIPO_LONGITUD = 15;
-    private static final int COLECCION_LONGITUD = 10;
-    private static final int CANTIDAD_LONGITUD = 10;
-    private static final int PRECIO_LONGITUD = 10;
+    private static final int COLECCION_LONGITUD = 15;
+    private static final int CANTIDAD_LONGITUD = 15;
+    private static final int PRECIO_LONGITUD = 15;
 
     @Override
     public Producto getProducto(String nombre) {

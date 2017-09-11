@@ -33,9 +33,9 @@ public class FileTipoProductoDao implements TipoProductoDao {
 
     private static final String NOMBRE_ARCHIVO = "TipoProducto";
     private static final Path file = Paths.get(NOMBRE_ARCHIVO);
-    private static final int LONGITUD_REGISTRO = 20;
-    private static final int REFERENCIA_REGISTRO = 10;
-    private static final int NOMBRE_LONGITUD = 10;
+    private static final int LONGITUD_REGISTRO = 30;
+    private static final int REFERENCIA_REGISTRO = 15;
+    private static final int NOMBRE_LONGITUD = 15;
 
     @Override
     public boolean saveTipoProducto(TipoProducto tipproducto) {

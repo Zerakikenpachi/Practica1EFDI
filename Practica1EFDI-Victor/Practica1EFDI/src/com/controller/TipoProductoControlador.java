@@ -18,7 +18,9 @@ public class TipoProductoControlador {
     }
 
     public boolean CrearTipoProducto(String pRefer, String pNombre) {
-        if (!pRefer.equals("") && !pNombre.equals("")) {
+        if (!VerficarColeccionExistente(pRefer, pNombre)) {
+            return false;
+        } else if (!pRefer.equals("") && !pNombre.equals("")) {
             nuevo = new TipoProducto(pRefer, pNombre);
             return p.GuardarTipoProducto(nuevo);
         } else {
@@ -35,7 +37,18 @@ public class TipoProductoControlador {
         List<TipoProducto> tipproducto = ConsultarTipoProductos();
         for (TipoProducto q : tipproducto) {
             if (q.getNombre().trim().equals(nombre)) {
-                data = q.getReferencia().trim() + " | " + q.getNombre().trim();
+                data = q.getReferencia().trim() + " - " + q.getNombre().trim();
+            }
+        }
+        return data;
+    }
+
+    public boolean VerficarColeccionExistente(String pRefer, String pNombre) {
+        boolean data = true;
+        List<TipoProducto> tipoproducto = ConsultarTipoProductos();
+        for (TipoProducto q : tipoproducto) {
+            if (q.getReferencia().trim().equals(pRefer) || q.getNombre().trim().equals(pNombre)) {
+                data = false;
             }
         }
         return data;
