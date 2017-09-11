@@ -35,7 +35,7 @@ public class ColeccionControlador {
         List<Coleccion> coleccion = ConsultarColecciones();
         for (Coleccion q : coleccion) {
             if (q.getId().trim().equals(Id)) {
-                data = q.getTrimestre().trim() + " | " + q.getId().trim();
+                data = q.getTrimestre().trim() + " - " + q.getId().trim();
             }
         }
         return data;

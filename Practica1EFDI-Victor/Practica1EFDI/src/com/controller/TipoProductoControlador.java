@@ -35,7 +35,7 @@ public class TipoProductoControlador {
         List<TipProducto> tipproducto = ConsultarTipoProductos();
         for (TipProducto q : tipproducto) {
             if (q.getNombre().trim().equals(nombre)) {
-                data = q.getReferencia().trim() + " | " + q.getNombre().trim();
+                data = q.getReferencia().trim() + " - " + q.getNombre().trim();
             }
         }
         return data;
